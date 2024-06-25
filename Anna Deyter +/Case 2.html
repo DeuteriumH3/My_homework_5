@@ -17,16 +17,16 @@
 
         if (year % 400 === 0) {
             console.log("Год високосный");
+        } else if (year % 100 === 0) {
+            console.log("Год невисокосный");
         } else if (year % 4 === 0) {
 			console.log("Год високосный");
-		} else if (year % 100 === 0) {
-            console.log("Год невисокосный");
         } else if (year % 1 === 0) {
             console.log("Год невисокосный");
 		}
 
         if ((year == null) || isNaN(year)) {
-        console.log("Ошибка! Введены некорректные данные.");
+            console.log("Ошибка! Введены некорректные данные. Введите год.");
         }
     </script>
     </body>
