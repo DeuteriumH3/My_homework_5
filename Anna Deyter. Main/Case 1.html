@@ -45,14 +45,19 @@
         return monthName;
         }
 
-        const monthNumber = parseInt(prompt("Введите номер месяца (от 1 до 12):"));
+        let monthNumber = prompt("Введите номер месяца (от 1 до 12):");
 
-        const monthName = getMonthName(monthNumber);
-
-        if (monthName !== null) {
-        console.log("Название месяца:", monthName);
+        if (monthNumber === null) {
+            console.log("Ошибка! Вы нажали кнопку 'Отмена'. Введите целое число от 1 до 12.");
         } else {
-        console.log("Ошибка! Введены некорректные данные.");
+        monthNumber = parseInt(monthNumber);
+
+        if (isNaN(monthNumber) || monthNumber < 1 || monthNumber > 12 || parseFloat(monthNumber)) {
+            console.log("Ошибка! Введены некорректные данные. Введите целое число от 1 до 12.");
+        } else {
+            const monthName = getMonthName(monthNumber);
+            console.log("Название месяца:", monthName);
+        }
         }
     </script>
     </body>
