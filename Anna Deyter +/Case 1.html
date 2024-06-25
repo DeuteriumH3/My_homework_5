@@ -12,9 +12,9 @@
         Вывести в консоль время суток и день недели в следующем виде: "Сейчас утро понедельника" и т.п.*/
 
         function getCurrentTimeOfDay() {
-        const now = new Date();
-        const hours = now.getHours();
-        let timeOfDay;
+            const now = new Date();
+            const hours = now.getHours();
+            let timeOfDay;
 
         if (hours >= 0 && hours < 6) {
             timeOfDay = "ночь";
@@ -30,9 +30,9 @@
         }
 
         function getDayOfWeek() {
-        const now = new Date();
-        const dayOfWeek = now.getDay();
-        let dayOfWeekName;
+            const now = new Date();
+            const dayOfWeek = now.getDay();
+            let dayOfWeekName;
 
         switch (dayOfWeek) {
             case 0:
